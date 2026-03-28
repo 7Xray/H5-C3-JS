@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xiaomiBOX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ccc;
+    }
+
+    .cart {
+      width: 234px;
+      height: 300px;
+      margin: 100px auto;
+      background-color: #ffffff;
+      text-align: center;
+      transition: all 0.4s;
+    }
+
+    .cart:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    }
+
+    .cart img {
+      width: 160px;
+      height: 160px;
+      margin-top: 20px;
+    }
+
+    .cart .title {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 18px;
+      color: #333;
+    }
+
+    .cart .desc {
+      font-size: 12px;
+      font-weight: 400;
+      color: #b0b0b0;
+      overflow: hidden;
+      /* 隐藏超出部分文字 */
+      text-overflow: ellipsis;
+      /* 文字超出部分显示省略号 */
+      white-space: nowrap;
+      /* 强制文字一行显示不换行 */
+      padding: 0 12px;
+    }
+
+    .cart .price {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+      color: #b0b0b0;
+    }
+
+    .cart .price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #ff6700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cart">
+    <img src="./sc_img/1.png" alt="耳机" title="耳机">
+    <h3 class="title">XiaoMi Buds 5</h3>
+    <p class="desc">舒适无感佩戴 | 高通全链路无损音频 | 哈曼AudioEFX 联合调音</p>
+    <p class="price">
+      <span>659元</span>
+      <del>699元</del>
+    </p>
+    <!-- 价格用两个行内元素，因为是在同一行显示！ -->
+  </div>
+</body>
+
+</html>

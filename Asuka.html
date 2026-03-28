@@ -5,10 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asuka Langley—首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .FirstBox,
+        .SecondBox,
+        .ThirdBox {
+            background-color: rgba(139, 255, 182, 0.8);
+            width: 677px;
+            margin: 0 auto;
+        }
+
+        .FourthBox {
+            background-color: rgba(240, 111, 173, .8);
+            height: 200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .FirstBox p,
+        .SecondBox p,
+        .ThirdBox p {
+            padding: 60px;
+            text-align: justify;
+        }
+
+        .FirstBox a:link {
+            text-decoration: none;
+            color: #d31b80;
+        }
+
+        .SecondBox a:link,
+        .ThirdBox a:link {
+            text-decoration: none;
+            color: #d75bed;
+        }
+
+        .SecondBox a:visited {
+            text-decoration: none;
+            color: #987575;
+        }
+
+        .SecondBox a:hover {
+            color: #140fb0;
+            text-decoration: underline;
+        }
+
+        .SecondBox a:active {
+            color: #000;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <header class="FirstBox">
         <h1 id="top"><a href="#">Asuka Langley</a></h1>
 
         <img src="./asuka/明日香.png" width="400" alt="Asuka Langley">
@@ -20,10 +74,10 @@
             年龄:14岁被选为EVA驾驶员,来到日本加入NERV<br>
             所属:NERV<br>
             称号:红色暴走公主
-        </p>
+        </p><br>
 
     </header>
-    <nav>
+    <nav class="SecondBox">
         <ul>
             <li><a href="#video">视频</a></li>
             <li><a href="#appearance">外貌特征</a></li>
@@ -38,8 +92,8 @@
     </nav>
 
 
-    <main>
-        <h3 id="video">视频</h3><video src="./asuka/_𝑨𝑺𝑼𝑲𝑨,𝒂𝒓𝒆 𝒚𝒐𝒖 𝒍𝒐𝒔𝒕__.mp4" muted loop autoplay
+    <main class="ThirdBox">
+        <h3 id="video">视频</h3><video src="./asuka/_ASUK-A,𝒂𝒓𝒆 𝒚𝒐𝒖 𝒍𝒐𝒔𝒕__.mp4" muted loop autoplay
             poster="./asuka/明日香.png" width="640"></video>
         <p>前往作者页面：<a href="https://space.bilibili.com/23329010?spm_id_from=333.1391.0.0" target="_blank">点击跳转</a></p>
 
@@ -182,7 +236,7 @@
     <br>
     <br>
     <br>
-    <footer>
+    <footer class="FourthBox">
         <p><strong>如果不靠自己的力量站起来，就什么都不会改变。</strong></p>
         <p>页面设计：明日香爱好者协会</p>
         <p>联系邮箱：<a href="mailto:asuka@eva-fans.com">asuka@eva-fans.com</a></p>
