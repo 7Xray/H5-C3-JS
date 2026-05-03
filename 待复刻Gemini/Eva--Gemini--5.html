@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NEON GENESIS | 终焉与新生</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,900&family=Noto+Serif+JP:wght@900&family=Montserrat:wght@100;300;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --primary: #e60012;
+      /* 核心红 */
+      --text: #ffffff;
+      --gray: #444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      overflow-hidden: hidden;
+      height: 100vh;
+      cursor: none;
+      /* 隐藏原生鼠标，使用自定义光圈 */
+    }
+
+    /* --- 自定义聚光灯鼠标 --- */
+    #cursor {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(230, 0, 18, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      transition: width 0.3s, height 0.3s;
+    }
+
+    /* --- 装饰线条 --- */
+    .line {
+      position: fixed;
+      background: var(--gray);
+      z-index: 1;
+    }
+
+    .v-line {
+      width: 1px;
+      height: 100vh;
+      top: 0;
+    }
+
+    .h-line {
+      height: 1px;
+      width: 100vw;
+      left: 0;
+    }
+
+    /* --- 核心内容区 --- */
+    .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10%;
+      z-index: 2;
+    }
+
+    /* 巨大的背景数字 01 */
+    .bg-number {
+      position: absolute;
+      font-size: 60vh;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.02);
+      left: 5%;
+      top: 10%;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* 杂志化标题排版 */
+    .hero-title {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-title h1 {
+      font-size: 8vw;
+      font-weight: 900;
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+    }
+
+    .hero-title h1 span {
+      display: block;
+      padding-left: 10vw;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--text);
+    }
+
+    .jp-text {
+      position: absolute;
+      right: -120px;
+      top: 0;
+      writing-mode: vertical-rl;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.5em;
+      color: var(--primary);
+    }
+
+    /* --- 浮动说明文字 --- */
+    .footer-info {
+      position: absolute;
+      bottom: 50px;
+      left: 10%;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gray);
+    }
+
+    .scroll-hint {
+      transform: rotate(-90deg);
+      transform-origin: left bottom;
+      margin-bottom: 20px;
+    }
+
+    /* --- 交互元素 --- */
+    .nav-links {
+      position: absolute;
+      top: 50px;
+      right: 10%;
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    /* 闪烁动画 */
+    @keyframes glitch {
+      0% {
+        transform: translate(0);
+      }
+
+      20% {
+        transform: translate(-2px, 2px);
+      }
+
+      40% {
+        transform: translate(-2px, -2px);
+      }
+
+      60% {
+        transform: translate(2px, 2px);
+      }
+
+      80% {
+        transform: translate(2px, -2px);
+      }
+
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    .red-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      display: inline-block;
+      margin-left: 10px;
+      box-shadow: 0 0 10px var(--primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+
+  <!-- 装饰线网格 -->
+  <div class="line v-line" style="left: 10%;"></div>
+  <div class="line v-line" style="left: 30%;"></div>
+  <div class="line h-line" style="top: 20%;"></div>
+
+  <nav class="nav-links">
+    <a href="#">PROJECT</a>
+    <a href="#">CHILDREN</a>
+    <a href="#">ANGELS</a>
+    <a href="#">STORE</a>
+  </nav>
+
+  <div class="bg-number">01</div>
+
+  <div class="container">
+    <div class="hero-title">
+      <div class="jp-text">さらば、すべてのエヴァンゲリオン</div>
+      <h1>Evangelion<br><span>Awakening</span></h1>
+      <p style="margin-top: 20px; font-weight: 100; letter-spacing: 8px; opacity: 0.5;">
+        THRICE UPON A TIME
+      <div class="red-dot"></div>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-info">
+    <div>
+      EST. 1995 / NEON GENESIS<br>
+      © KHARA / PROJECT EVA.
+    </div>
+    <div class="scroll-hint">SCROLL TO TERMINAL DOGMA</div>
+    <div style="text-align: right;">
+      LONGINUS SYSTEM ACTIVE<br>
+      4.0+1.0 BY HIDEAKI ANNO
+    </div>
+  </div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // 简单的标题视差效果
+    document.addEventListener('mousemove', e => {
+      const x = (window.innerWidth / 2 - e.clientX) / 50;
+      const y = (window.innerHeight / 2 - e.clientY) / 50;
+      document.querySelector('.hero-title').style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
+
+</html>

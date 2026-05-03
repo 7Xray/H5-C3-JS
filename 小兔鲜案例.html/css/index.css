@@ -1,0 +1,418 @@
+/* 用来写index-head.html的css */
+/* 返回顶部部分 */
+html {
+  scroll-behavior: smooth;
+}
+
+.back {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+}
+
+.back a p {
+  text-align: center;
+  color: #fff;
+}
+
+.back a p:first-child {
+  margin-top: 13px;
+}
+
+
+.entry {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+
+.entry .w {
+  position: relative;
+  height: 100%;
+  /* background: url(../uploads/banner1.png) no-repeat; */
+}
+
+.category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*提高定位层级，避免被banner遮挡*/
+  z-index: 999;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.category ul li {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 12px 0 29px;
+  transition: .2s;
+}
+
+.category ul li:hover {
+  background-color: #5EB69C;
+}
+
+.category ul li i {
+  font-size: 12px;
+}
+
+.category ul li a {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.category ul li a:first-child {
+  font-size: 16px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner .circle {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.banner .circle li {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.banner .circle li:hover {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  background-color: #fff;
+}
+
+.banner .next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 60px;
+  margin-top: -30px;
+  top: 50%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner .next i {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  transition: .2s;
+}
+
+.banner .next i:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 新鲜好物模块 */
+.bd-ht {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+  width: 100%;
+  /* background-color: pink; */
+}
+
+.bd-ht p {
+  font-size: 30px;
+  color: #333;
+}
+
+.bd-ht p small {
+  font-size: 16px;
+  color: #A1A1A1;
+  margin-left: 28px;
+}
+
+.bd-ht a {
+  font-size: 16px;
+  color: #A1A1A1;
+}
+
+.bd-ht a:hover {
+  color: #5EB69C;
+}
+
+.bd-hb ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bd-hb ul li {
+  width: 304px;
+  height: 404px;
+  background-color: #EEF9F4;
+}
+
+.bd-hb ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bd-hb ul li img {
+  width: 304px;
+  height: 304px;
+}
+
+.bd-hb ul li h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 17px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bd-hb ul li p {
+  font-size: 22px;
+  color: #AA2113;
+  margin-top: 8.5px;
+  text-align: center;
+}
+
+.hot .bd-hb ul li {
+  background-color: #fff;
+}
+
+.hot .bd-hb ul {
+  margin-bottom: 60px;
+}
+
+.hot .bd-hb ul li p {
+  font-size: 16px;
+  color: #A1A1A1;
+  margin-top: 18px;
+  text-align: center;
+}
+
+/* 品牌推荐模块 */
+.brand {
+  height: 468px;
+  background-color: #F5F5F5;
+}
+
+.b-top {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.b-top p {
+  font-size: 30px;
+  color: #333;
+}
+
+.b-top p small {
+  font-size: 16px;
+  color: #A1A1A1;
+  margin-left: 28px;
+}
+
+.b-z {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 4px 0 4px 0;
+}
+
+/* bcb9b9 */
+.b-z a {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: #D1D1D1;
+  margin-left: 10px;
+}
+
+.b-z a:hover {
+  background-color: #00BE9A;
+}
+
+.b-z a i {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 5px;
+}
+
+.b-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.b-bottom ul li {
+  width: 244px;
+  height: 306px;
+  background-color: pink;
+}
+
+.b-bottom ul li img {
+  width: 244px;
+  height: 306px;
+}
+
+/* 服饰模块 */
+/* top部分 */
+.c-top {
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+  padding-top: 10px;
+}
+
+.c-top h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.c-top .choose {
+  display: flex;
+}
+
+.c-top .choose ul {
+  display: flex;
+}
+
+.c-top .choose ul li a {
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.c-top .choose ul li a:hover {
+  color: #ffffff;
+  background-color: #00BE9A;
+  border-radius: 5px;
+}
+
+.c-top .choose .check-more {
+  font-size: 16px;
+  color: #A1A1A1;
+  margin-left: 60px;
+}
+
+.c-top .choose .check-more:hover {
+  color: #00BE9A;
+}
+
+/* body部分 */
+.c-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-body .body-l a {
+  width: 248px;
+  height: 610px;
+}
+
+.c-body .body-r ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 968px;
+  height: 610px;
+  /* background-color: pink; */
+}
+
+.c-body .body-r ul li {
+  width: 242px;
+  height: 305px;
+  padding: 10px 21px 0;
+  /* background-color: skyblue; */
+}
+
+.c-body .body-r ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 19px;
+}
+
+.c-body .body-r ul img {
+  width: 200px;
+  height: 180px;
+}
+
+.c-body .body-r ul li h3 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.c-body .body-r .price {
+  font-size: 22px;
+  color: #AA2113;
+  margin-top: 9px;
+}
+
+.c-body .body-r .price small {
+  font-size: 16px;
+}
+
+/* 最新专题模块 */
+.news {
+  margin-bottom: 60px;
+}
+
+.news ul {
+  display: flex;
+  gap: 12px;
+}
+
+.news ul li {
+  flex: 1;
+  height: 355px;
+}
+
+.news ul li img {
+  width: 100%;
+}
+
+.news .con {
+  height: 67px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+  font-size: 14px;
+  color: #666666;
+}
+
+.news .con .view {
+  margin-left: 15px;
+}

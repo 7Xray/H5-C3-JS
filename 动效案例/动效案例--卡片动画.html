@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background: linear-gradient(190deg, rgb(67, 22, 219) 13.57%, rgb(144, 118, 231) 98.38%) no-repeat;
+    }
+
+    .box {
+      position: relative;
+      width: 674px;
+      height: 500px;
+      /* background: #fff; */
+      margin: 0 auto;
+    }
+
+    .c1 {
+      position: absolute;
+      width: 183px;
+      height: 120px;
+      top: 150px;
+      left: -37px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      /*相当于给盒子加了个好看的边框*/
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+      /*前两个0px 指的是水平和垂直偏移的px 第三个指的是模糊半径 第四个指的是阴影的宽度 inset是内阴影不是外阴影*/
+    }
+
+    .c2 {
+      position: absolute;
+      width: 183px;
+      height: 120px;
+      top: 150px;
+      left: 176px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    }
+
+    .c3 {
+      position: absolute;
+      width: 701px;
+      height: 428px;
+      top: 200px;
+      left: 0px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    }
+
+    .c4 {
+      position: absolute;
+      width: 400px;
+      height: 273px;
+      top: 370px;
+      left: 40px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    }
+
+    .c5 {
+      position: absolute;
+      width: 414px;
+      height: 273px;
+      top: 400px;
+      left: 340px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    }
+
+    .box>* {
+      transform: rotateY(-20deg) rotateX(20deg);
+      transition: all .75s;
+    }
+
+    .box:hover .c1 {
+      transform: translate3d(-30px, -30px, 0);
+    }
+
+    .box:hover .c2 {
+      transform: translate3d(0px, -30px, 0);
+    }
+
+    .box:hover .c3 {
+      transform: translate3d(0px, 0px, 0);
+    }
+
+    .box:hover .c4 {
+      transform: translate3d(-120px, 60px, 0);
+    }
+
+    .box:hover .c5 {
+      transform: translate3d(30px, 30px, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="c1">
+      <img src="../sc_img/card1.svg" alt="c1">
+    </div>
+    <div class="c2">
+      <img src="../sc_img/card2.svg" alt="c2">
+    </div>
+    <div class="c3">
+      <img src="../sc_img/card3.svg" alt="c3">
+    </div>
+    <div class="c4">
+      <img src="../sc_img/card4.svg" alt="c4">
+    </div>
+    <div class="c5">
+      <img src="../sc_img/card5.svg" alt="c5">
+    </div>
+  </div>
+</body>
+
+</html>

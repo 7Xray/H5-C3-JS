@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #898181;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    .box {
+      width: 1760px;
+      height: 566px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    .box ul {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-rows: 566px;
+      gap: 10px;
+      transition: all .5s;
+    }
+
+    .item {
+      position: relative;
+    }
+
+    .box .item:nth-child(1) {
+      background: url(../img_EVA/evawf.jpg) no-repeat 50%/cover;
+    }
+
+    .box .item:nth-child(2) {
+      background: url(../img_EVA/A_KONAKA_20250208.jpg) no-repeat 50%/cover;
+    }
+
+    .box .item:nth-child(3) {
+      background: url(../img_EVA/f_and_s.png) no-repeat 50%/cover;
+    }
+
+    .box .item:nth-child(4) {
+      background: url(../img_EVA/eye_eva.png) no-repeat 50%/cover;
+    }
+
+    .box ul:has(.item:nth-child(1):hover) {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    .box ul:has(.item:nth-child(2):hover) {
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+    }
+
+    .box ul:has(.item:nth-child(3):hover) {
+      grid-template-columns: 1fr 1fr 2fr 1fr;
+    }
+
+    .box ul:has(.item:nth-child(4):hover) {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+    }
+
+    .item p {
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ec9d3c;
+      transition: all .5s;
+    }
+
+    .box .item:hover p {
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li class="item">
+        <p>EVA</p>
+      </li>
+      <li class="item">
+        <p>EVA</p>
+      </li>
+      <li class="item">
+        <p>EVA</p>
+      </li>
+      <li class="item">
+        <p>EVA</p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

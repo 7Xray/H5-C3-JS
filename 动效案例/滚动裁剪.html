@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #222222;
+    }
+
+    @keyframes clip {
+      0% {
+        -webkit-clip-path: circle(100px at 0% 50%);
+        clip-path: circle(100px at 0% 50%);
+      }
+
+      50% {
+        -webkit-clip-path: circle(100px at 100% 50%);
+        clip-path: circle(100px at 100% 50%);
+      }
+
+      100% {
+        -webkit-clip-path: circle(100px at 0% 50%);
+        clip-path: circle(100px at 0% 50%);
+      }
+    }
+
+    h1 {
+      position: relative;
+      font-size: 200px;
+      color: #292929;
+    }
+
+    h1::after {
+      content: 'EVANGELION';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 200px;
+      background: linear-gradient(to right, #ff69b3, #fe0000, #ffa401, #ffff01, #008102, #40e1d2, #410898, #9400d4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: clip 5s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>EVANGELION</h1>
+</body>
+
+</html>

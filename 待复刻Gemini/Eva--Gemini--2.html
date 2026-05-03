@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 对应的 CSS */
+    .seele-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      padding: 50px 0;
+      background-color: #050505;
+    }
+
+    .seele-monolith {
+      width: 120px;
+      height: 300px;
+      background: #0d0d0d;
+      border: 2px solid #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    /* 文字默认暗淡 */
+    .seele-monolith .sound-only,
+    .seele-monolith .seele-number,
+    .seele-monolith .seele-title {
+      color: #333;
+      font-family: 'Share Tech Mono', monospace;
+      transition: all 0.5s ease;
+    }
+
+    .seele-monolith .sound-only {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      border: 1px solid #333;
+      padding: 5px 10px;
+    }
+
+    .seele-monolith .seele-number {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .seele-monolith .seele-title {
+      font-size: 0.8rem;
+      letter-spacing: 5px;
+    }
+
+    /* 悬停或激活状态：红色瞬间亮起，带外发光 */
+    .seele-monolith:hover,
+    .seele-monolith.active {
+      border-color: #ff0055;
+      background: #120005;
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+    }
+
+    .seele-monolith:hover .sound-only,
+    .seele-monolith.active .sound-only {
+      color: #ff0055;
+      border-color: #ff0055;
+      text-shadow: 0 0 10px #ff0055;
+    }
+
+    .seele-monolith:hover .seele-number,
+    .seele-monolith.active .seele-number {
+      color: #ff0055;
+      text-shadow: 0 0 15px #ff0055;
+    }
+
+    .seele-monolith:hover .seele-title,
+    .seele-monolith.active .seele-title {
+      color: #ff0055;
+      text-shadow: 0 0 5px #ff0055;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 复制这个 HTML 到你的页面里 -->
+  <div class="seele-container">
+    <!-- 石碑 01 -->
+    <div class="seele-monolith active">
+      <div class="sound-only">SOUND ONLY</div>
+      <div class="seele-number">01</div>
+      <div class="seele-title">SEELE</div>
+    </div>
+    <!-- 石碑 02 -->
+    <div class="seele-monolith">
+      <div class="sound-only">SOUND ONLY</div>
+      <div class="seele-number">02</div>
+      <div class="seele-title">SEELE</div>
+    </div>
+  </div>
+</body>
+
+</html>

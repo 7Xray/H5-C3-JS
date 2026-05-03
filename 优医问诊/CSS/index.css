@@ -1,0 +1,299 @@
+:root {
+  --text1: #121826;
+  --text2: #3C3E42;
+  --text3: #848484;
+  --text4: #979797;
+  --text5: #C3C3C5;
+  --text6: #6F6F6F;
+  --text-green: #2CB5A5;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.home-header {
+  position: relative;
+  height: 130px;
+  /* background-color: pink; */
+  padding: 30px 15px 0px;
+}
+
+.home-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  background: linear-gradient(180deg, #3ECEC5D8 0%, #26BCC6 100%);
+  border-bottom-left-radius: 150px 20px;
+  border-bottom-right-radius: 150px 20px;
+}
+
+.home-header h1 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.home-header .header-search {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 30px);
+  line-height: 40px;
+  height: 40px;
+  border-radius: 22px;
+  background: #FFFFFF;
+  box-shadow: 0px 7.5px 11px -3.5px #E0ECFAD1;
+  color: var(--text4);
+  font-size: 13px;
+  padding: 0 15px;
+}
+
+.header-search img {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+/* 导航栏部分 */
+.home-nav {
+  padding: 23px 15px 5px;
+}
+
+.home-nav ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.home-nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+.row li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.row li img {
+  height: 46px;
+  width: 46px;
+}
+
+.row li h3 {
+  font-family: 'PingFang SC';
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text1);
+  margin-bottom: 2px;
+}
+
+.row li p {
+  font-family: 'PingFang SC';
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text3);
+}
+
+.row-b li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.row-b li img {
+  width: 31px;
+  height: 31px;
+}
+
+.row-b li p {
+  font-family: 'PingFang SC';
+  line-height: 19px;
+  font-size: 13px;
+  color: var(--text2);
+}
+
+/* 广告部分 */
+.banner {
+  height: 120px;
+  padding: 10px 15px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/*tabs切换部分*/
+/* tabs切换卡 */
+.tabs-card {
+  position: sticky;
+  top: 0;
+  height: 44px;
+  line-height: 44px;
+  background-color: #fff;
+}
+
+.tabs-card ul {
+  display: flex;
+}
+
+.tabs-card ul li {
+  font-size: 14px;
+  padding: 0 15px;
+  color: var(--text4);
+}
+
+.tabs-card ul .active {
+  color: var(--text1);
+  font-weight: 600;
+}
+
+.tabs-card .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(75px);
+  height: 2px;
+  width: 20px;
+  background-color: var(--text-green);
+}
+
+/*tabs切换内容*/
+.tabs-content {
+  padding: 0 15px;
+}
+
+.con-item {
+  padding: 20px 0 15px;
+  border-bottom: 1px solid var(--text5);
+}
+
+.con-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.con-head .avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.con-head .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.con-head .info {
+  flex: 1;
+}
+
+.con-head .info .name {
+  font-size: 14px;
+  color: var(--text2);
+}
+
+.con-head .info .desc {
+  font-size: 12px;
+  color: var(--text5);
+}
+
+.con-head button {
+  height: 27px;
+  width: 66px;
+  border-radius: 13.5px;
+  border: 1px solid #2CB5A5;
+  line-height: 27px;
+  font-size: 11px;
+  color: var(--text-green);
+  background: transparent;
+}
+
+.con-body .title {
+  font-size: 16px;
+  color: var(--text1);
+  font-weight: 600;
+  margin: 8px 0 6px;
+}
+
+.con-body .tags {
+  font-size: 12px;
+  color: var(--text-green);
+}
+
+.con-body .body-info {
+  font-size: 14px;
+  color: var(--text6);
+  line-height: 24px;
+  /* 多行显示省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 6px;
+}
+
+.imgs {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 10px;
+}
+
+.imgs figure {
+  overflow: hidden;
+  width: 106px;
+  height: 106px;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.imgs figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.logs span {
+  font-size: 12px;
+  color: var(--text5);
+  margin-right: 12px;
+}
+
+/* footer底部部分 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.footer ul {
+  display: flex;
+  height: 51px;
+}
+
+.footer ul li {
+  flex: 1;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer ul li img {
+  width: 17px;
+  height: 18px;
+}
+
+.footer ul li p {
+  font-size: 10px;
+  color: var(--text6);
+}

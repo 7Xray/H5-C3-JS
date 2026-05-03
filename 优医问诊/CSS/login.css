@@ -1,0 +1,177 @@
+:root {
+  --text1: #121826;
+  --text2: #3C3E42;
+  --text3: #C3C3C5;
+  --text4: #D9DBDE;
+  --text5: #6F6F6F;
+  --text-green: #16C2A3;
+  --bh: 812px;
+  --bw: 375px;
+  --padding15: 15px;
+}
+
+body {
+  padding-top: 44px;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  width: 100%;
+  line-height: 44px;
+  background-color: #fff;
+  padding: 0 var(--padding15);
+}
+
+.nav-bar .back {
+
+  height: 100%;
+  width: 44px;
+}
+
+.nav-bar .back i {
+  font-size: 18px;
+  color: #000;
+}
+
+.nav-bar .regist {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-size: 17px;
+  color: var(--text-green);
+  line-height: 44px;
+  font-weight: 500;
+}
+
+/* 头部制作 */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 36px;
+  width: 100%;
+  font-family: PingFang SC;
+  margin: 25px 0 45px;
+  padding: 0 var(--padding15);
+}
+
+.nav-header h3 {
+  font-size: 24px;
+  color: var(--text1);
+}
+
+.nav-header a {
+  font-size: 15px;
+  color: var(--text2);
+}
+
+.nav-header a i {
+  font-size: 18px;
+}
+
+/* 表单部分 */
+.logon-form {
+  padding: 0 var(--padding15);
+}
+
+.login-same {
+  position: relative;
+  height: 51px;
+  padding: var(--padding15) 0;
+  border-bottom: 1px solid #EDEDEDE5;
+}
+
+.login-same input::placeholder {
+  font-size: 14px;
+  color: var(--text3);
+}
+
+.login-same img {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  height: 14px;
+  width: 14px;
+  color: var(--text5);
+}
+
+.login-same.agree {
+  border-bottom: none;
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.login-same.agree i {
+  font-size: 14px;
+  color: var(--text3);
+}
+
+.login-same.agree a {
+  font-size: 13px;
+  color: var(--text-green);
+}
+
+.login-btn {
+  width: 100%;
+  height: 44px;
+  border-radius: 22px;
+  background: #FAFAFA;
+  color: #D9DBDE;
+  font-size: 16px;
+}
+
+.forget {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.forget a {
+  color: #848484;
+}
+
+/* 第三方登录 */
+.third-login {
+  width: 200px;
+  margin: 200px 87.5px 40px;
+}
+
+.third-login p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.third-login p::before,
+.third-login p::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  width: 65px;
+  background-color: var(--text3);
+}
+
+.third-login p span {
+  margin: 0 15px;
+}
+
+.third-login a {
+  display: inline-block;
+  text-align: center;
+  height: 44px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.third-login a img {
+  height: 30px;
+  width: 30px;
+}

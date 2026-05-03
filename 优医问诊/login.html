@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入图标 -->
+  <link rel="icon" href="./favicon.ico">
+  <!-- 引入字体图标 -->
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <!-- 引入css -->
+  <link rel="stylesheet" href="./CSS/base.css">
+  <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+  <!-- nav-bar制作 -->
+  <div class="nav-bar">
+    <div class="back">
+      <i class="iconfont icon-zuojiantou"></i>
+    </div>
+    <a class="regist" href="#">注册</a>
+  </div>
+
+  <!-- 头部制作 -->
+  <div class="nav-header">
+    <h3>密码登录</h3>
+    <a href="#">手机验证码登录<i class="iconfont icon-youjiantou"></i></a>
+  </div>
+
+  <!-- 表单部分 -->
+  <form action="" class="logon-form" autocomplete="off">
+    <div class="login-same">
+      <!-- tel在移动端会自动弹出手机号输入框 -->
+      <input type="tel" placeholder="请输入手机号">
+    </div>
+    <div class="login-same">
+      <input type="password" placeholder="请输入密码">
+      <img src="./img/eye-off.svg" alt="">
+    </div>
+    <div class="login-same agree">
+      <i class="iconfont icon-ico2"></i>
+      我已同意 <a href="#"> 用户协议</a> 及 <a href="#">隐私协议</a>
+    </div>
+    <button class="login-btn">登录</button>
+    <p class="forget"><a href="#">忘记密码？</a></p>
+  </form>
+
+  <!-- 第三方登录 -->
+  <div class="third-login">
+    <p>
+      <span>第三方登录</span>
+    </p>
+    <a href="#"><img src="./img/qq.svg" alt="qq"></a>
+  </div>
+</body>
+
+</html>

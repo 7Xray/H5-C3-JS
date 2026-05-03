@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NERV 视觉模块展示</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Shippori+Mincho:wght@900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #080808;
+      --orange: #FF7B00;
+      --red: #D90429;
+      --yellow: #FFB703;
+      --at-gold: #FFB703;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: #fff;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
+    /* 极简网格背景 */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: -1;
+    }
+
+    /* ===================================================
+           模块一：A.T. FIELD（绝对领域）悬浮卡片
+           利用 clip-path 绘制 100% 还原的同心八边形
+        =================================================== */
+    .at-field-card {
+      width: 350px;
+      height: 350px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 183, 3, 0.2);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    /* A.T. Field 的八边形图层 */
+    .at-octagon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* 八边形剪裁路径 */
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+      border: 2px solid var(--at-gold);
+      background: repeating-linear-gradient(45deg,
+          rgba(255, 183, 3, 0.1),
+          rgba(255, 183, 3, 0.1) 2px,
+          transparent 2px,
+          transparent 8px);
+      transition: all 0.5s ease;
+    }
+
+    /* 制造同心圆（层）效果 */
+    .layer-1 {
+      width: 90%;
+      height: 90%;
+      opacity: 0.3;
+    }
+
+    .layer-2 {
+      width: 65%;
+      height: 65%;
+      opacity: 0.6;
+    }
+
+    .layer-3 {
+      width: 40%;
+      height: 40%;
+      opacity: 1;
+      background: rgba(255, 183, 3, 0.2);
+    }
+
+    /* 悬停时的“展开”动画 */
+    .at-field-card:hover .layer-1 {
+      width: 95%;
+      opacity: 0.6;
+    }
+
+    .at-field-card:hover .layer-2 {
+      width: 75%;
+      opacity: 0.9;
+    }
+
+    .at-field-card:hover .layer-3 {
+      width: 30%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .at-text {
+      position: relative;
+      z-index: 10;
+      font-weight: bold;
+      text-shadow: 0 0 10px #000;
+      letter-spacing: 2px;
+    }
+
+
+    /* ===================================================
+           模块二：PATTERN BLUE（模式蓝色）使徒警告面板
+           还原 NERV 经典的红黑斜条纹和闪烁警告
+        =================================================== */
+    .alert-panel {
+      width: 400px;
+      background: #000;
+      border: 3px solid var(--red);
+      padding: 20px;
+      box-shadow: 0 0 25px rgba(217, 4, 41, 0.4);
+      position: relative;
+    }
+
+    /* 经典的警戒斜条纹 */
+    .hazard-bar {
+      height: 15px;
+      background: repeating-linear-gradient(-45deg,
+          #000,
+          #000 10px,
+          var(--red) 10px,
+          var(--red) 20px);
+      margin-bottom: 15px;
+    }
+
+    .alert-header {
+      display: flex;
+      justify-content: space-between;
+      color: var(--red);
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .alert-title {
+      color: #fff;
+      background: var(--red);
+      font-size: 1.8rem;
+      text-align: center;
+      padding: 5px 0;
+      font-weight: 900;
+      letter-spacing: 4px;
+      animation: flash 0.8s infinite steps(1);
+    }
+
+    .alert-sub {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--red);
+      margin-top: 5px;
+    }
+
+    @keyframes flash {
+      50% {
+        background: transparent;
+        color: var(--red);
+      }
+    }
+
+
+    /* ===================================================
+           模块三：巨大文字排版（庵野秀明 Style）
+           纯文字构成的极强视觉冲击力
+        =================================================== */
+    .anno-text-layout {
+      width: 500px;
+      background: #000;
+      padding: 30px;
+      border: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .anno-title {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 0.9;
+      text-align: justify;
+      text-transform: uppercase;
+      /* 强制文字拉伸变扁（非常 EVA） */
+      transform: scaleY(1.3);
+      transform-origin: top;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .anno-sub {
+      font-size: 0.6rem;
+      letter-spacing: 9px;
+      color: #666;
+      border-top: 1px solid #333;
+      padding-top: 5px;
+      text-align: justify;
+    }
+
+    .anno-sub::after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 模块一展示 -->
+  <div class="at-field-card">
+    <div class="at-octagon layer-1"></div>
+    <div class="at-octagon layer-2"></div>
+    <div class="at-octagon layer-3"></div>
+    <div class="at-text">A.T. FIELD ACTIVE</div>
+    <div style="font-size: 0.6rem; color: var(--at-gold); position: absolute; bottom: 20px;">点击或悬停穿透</div>
+  </div>
+
+  <!-- 模块二展示 -->
+  <div class="alert-panel">
+    <div class="hazard-bar"></div>
+    <div class="alert-header">
+      <span>CODE: 04</span>
+      <span>SYSTEM DATE: 2026</span>
+    </div>
+    <div class="alert-title">PATTERN BLUE</div>
+    <div class="alert-sub">使徒接近 / 血型：蓝色</div>
+  </div>
+
+  <!-- 模块三展示 -->
+  <div class="anno-text-layout">
+    <div class="anno-title">极密<br>档案</div>
+    <div class="anno-sub">TOP SECRET / RESTRICTED ACCESS</div>
+  </div>
+
+</body>
+
+</html>
